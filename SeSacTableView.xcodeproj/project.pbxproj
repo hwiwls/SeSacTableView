@@ -14,6 +14,8 @@
 		2E6C27292B499D4300C87B4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E6C27272B499D4300C87B4A /* LaunchScreen.storyboard */; };
 		2E6C27322B499E2100C87B4A /* ConcentrationModeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6C27312B499E2100C87B4A /* ConcentrationModeTableViewController.swift */; };
 		2E6C27342B499EAB00C87B4A /* ConcentrationModeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6C27332B499EAB00C87B4A /* ConcentrationModeTableViewCell.swift */; };
+		2E6C27372B49B3CC00C87B4A /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6C27362B49B3CC00C87B4A /* SettingTableViewCell.swift */; };
+		2E6C27392B49B3D900C87B4A /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6C27382B49B3D900C87B4A /* SettingTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		2E6C272A2B499D4300C87B4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E6C27312B499E2100C87B4A /* ConcentrationModeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationModeTableViewController.swift; sourceTree = "<group>"; };
 		2E6C27332B499EAB00C87B4A /* ConcentrationModeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationModeTableViewCell.swift; sourceTree = "<group>"; };
+		2E6C27362B49B3CC00C87B4A /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		2E6C27382B49B3D900C87B4A /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 				2E6C271E2B499D4100C87B4A /* SceneDelegate.swift */,
 				2E6C27222B499D4100C87B4A /* Main.storyboard */,
 				2E6C27302B499DED00C87B4A /* ConcentrationMode */,
+				2E6C27352B49B39C00C87B4A /* Setting */,
 				2E6C27252B499D4300C87B4A /* Assets.xcassets */,
 				2E6C27272B499D4300C87B4A /* LaunchScreen.storyboard */,
 				2E6C272A2B499D4300C87B4A /* Info.plist */,
@@ -76,6 +81,15 @@
 				2E6C27332B499EAB00C87B4A /* ConcentrationModeTableViewCell.swift */,
 			);
 			path = ConcentrationMode;
+			sourceTree = "<group>";
+		};
+		2E6C27352B49B39C00C87B4A /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				2E6C27362B49B3CC00C87B4A /* SettingTableViewCell.swift */,
+				2E6C27382B49B3D900C87B4A /* SettingTableViewController.swift */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +163,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E6C27392B49B3D900C87B4A /* SettingTableViewController.swift in Sources */,
 				2E6C271D2B499D4100C87B4A /* AppDelegate.swift in Sources */,
+				2E6C27372B49B3CC00C87B4A /* SettingTableViewCell.swift in Sources */,
 				2E6C271F2B499D4100C87B4A /* SceneDelegate.swift in Sources */,
 				2E6C27342B499EAB00C87B4A /* ConcentrationModeTableViewCell.swift in Sources */,
 				2E6C27322B499E2100C87B4A /* ConcentrationModeTableViewController.swift in Sources */,

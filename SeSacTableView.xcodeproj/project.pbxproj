@@ -16,6 +16,8 @@
 		2E6C27342B499EAB00C87B4A /* ConcentrationModeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6C27332B499EAB00C87B4A /* ConcentrationModeTableViewCell.swift */; };
 		2E6C27372B49B3CC00C87B4A /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6C27362B49B3CC00C87B4A /* SettingTableViewCell.swift */; };
 		2E6C27392B49B3D900C87B4A /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6C27382B49B3D900C87B4A /* SettingTableViewController.swift */; };
+		2E6C273C2B49BA0E00C87B4A /* ShoppingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6C273B2B49BA0E00C87B4A /* ShoppingTableViewController.swift */; };
+		2E6C273E2B49BA1900C87B4A /* ShoppingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6C273D2B49BA1900C87B4A /* ShoppingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		2E6C27332B499EAB00C87B4A /* ConcentrationModeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationModeTableViewCell.swift; sourceTree = "<group>"; };
 		2E6C27362B49B3CC00C87B4A /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		2E6C27382B49B3D900C87B4A /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		2E6C273B2B49BA0E00C87B4A /* ShoppingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewController.swift; sourceTree = "<group>"; };
+		2E6C273D2B49BA1900C87B4A /* ShoppingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 				2E6C27222B499D4100C87B4A /* Main.storyboard */,
 				2E6C27302B499DED00C87B4A /* ConcentrationMode */,
 				2E6C27352B49B39C00C87B4A /* Setting */,
+				2E6C273A2B49B9F800C87B4A /* Shopping */,
 				2E6C27252B499D4300C87B4A /* Assets.xcassets */,
 				2E6C27272B499D4300C87B4A /* LaunchScreen.storyboard */,
 				2E6C272A2B499D4300C87B4A /* Info.plist */,
@@ -90,6 +95,15 @@
 				2E6C27382B49B3D900C87B4A /* SettingTableViewController.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		2E6C273A2B49B9F800C87B4A /* Shopping */ = {
+			isa = PBXGroup;
+			children = (
+				2E6C273B2B49BA0E00C87B4A /* ShoppingTableViewController.swift */,
+				2E6C273D2B49BA1900C87B4A /* ShoppingTableViewCell.swift */,
+			);
+			path = Shopping;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,11 +178,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E6C27392B49B3D900C87B4A /* SettingTableViewController.swift in Sources */,
+				2E6C273E2B49BA1900C87B4A /* ShoppingTableViewCell.swift in Sources */,
 				2E6C271D2B499D4100C87B4A /* AppDelegate.swift in Sources */,
 				2E6C27372B49B3CC00C87B4A /* SettingTableViewCell.swift in Sources */,
 				2E6C271F2B499D4100C87B4A /* SceneDelegate.swift in Sources */,
 				2E6C27342B499EAB00C87B4A /* ConcentrationModeTableViewCell.swift in Sources */,
 				2E6C27322B499E2100C87B4A /* ConcentrationModeTableViewController.swift in Sources */,
+				2E6C273C2B49BA0E00C87B4A /* ShoppingTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

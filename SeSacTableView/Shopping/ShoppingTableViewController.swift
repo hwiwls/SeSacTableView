@@ -7,12 +7,22 @@
 
 import UIKit
 
+struct Wish {
+    var wish: String
+    var check: Bool
+    var star: Bool
+}
+
 class ShoppingTableViewController: UITableViewController {
     
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var addBtn: UIButton!
     
-    var list = ["갖고싶은 거 1", "갖고싶은 거 2", "갖고싶은 거 3", "갖고싶은 거 4"]
+    var wishList: [Wish] = [Wish(wish: "맥라렌", check: false, star: false),
+                            Wish(wish: "케로로 스티커", check: false, star: false),
+                            Wish(wish: "케로로 공책", check: false, star: false),
+                            Wish(wish: "케로로 인형", check: false, star: false),
+                            Wish(wish: "기로로 토끼탈 스티커", check: false, star: false)]
 
     
     override func viewDidLoad() {
@@ -33,32 +43,63 @@ class ShoppingTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list.count
+        return wishList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "shoppingCell", for: indexPath) as! ShoppingTableViewCell
         
-        cell.checkBoxBtn.setImage(UIImage(systemName: "checkmark.square")?.withTintColor(.black, renderingMode: .alwaysOriginal), for: .normal)
-        
-        cell.titleLabel.text = list[indexPath.row]
+        cell.titleLabel.text = wishList[indexPath.row].wish
         cell.titleLabel.font = .systemFont(ofSize: 14)
         cell.titleLabel.textColor = .black
         
-        cell.starBtn.setImage(UIImage(systemName: "star")?.withTintColor(.black, renderingMode: .alwaysOriginal), for: .normal)
+        let checkImage = wishList[indexPath.row].check == false ? "checkmark.square" : "checkmark.square.fill"
+        cell.checkBoxBtn.setImage(UIImage(systemName: checkImage)?.withTintColor(.black, renderingMode: .alwaysOriginal), for: .normal)
         
+        let starImage = wishList[indexPath.row].star == false ? "star" : "star.fill"
+        cell.starBtn.setImage(UIImage(systemName: starImage)?.withTintColor(.black, renderingMode: .alwaysOriginal), for: .normal)
+        
+        cell.checkBoxBtn.tag = indexPath.row
+        cell.starBtn.tag = indexPath.row
+        
+        cell.checkBoxBtn.addTarget(self, action: #selector(checkBoxBtnClicked), for: .touchUpInside)
+        
+        cell.starBtn.addTarget(self, action: #selector(starBtnClicked), for: .touchUpInside)
         
         return cell
+    }
+    
+    @objc func checkBoxBtnClicked(sender: UIButton) {
+        print("check btn clicked")
+        wishList[sender.tag].check.toggle()
+        tableView.reloadData()
+    }
+    
+    @objc func starBtnClicked(sender: UIButton) {
+        print("\(sender.tag) star box clicked")
+        wishList[sender.tag].star.toggle()
+        tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
     
-    
-    @IBAction func addBtnClicked(_ sender: Any) {
-        list.append(searchTextField.text!)
-        tableView.reloadData()
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            wishList.remove(at: indexPath.row)
+            
+            tableView.reloadData()
+        }
+    }
+    
+    
+    @IBAction func addBtnClicked(_ sender: Any) {
+        wishList.append(Wish(wish: searchTextField.text!, check: false, star: false))
+        tableView.reloadData()
+    }
 }
